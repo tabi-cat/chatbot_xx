@@ -2,10 +2,13 @@
 
 import random, datetime, calendar, time
 
+#messages to quit chatbot_xx
 quitbot = ['quit','goodbye','exit']
 
-ynlist = ['yes','yep','no','nope','maybe','i dont know',"i don't know", "dunno"]
+#list of yes/no/maybe/dunno responses
+ynlist = ['yes','yep','no','nope','maybe','i dont know',"i don't know", "dunno"] 
 
+#random statements that chatbot_xx makes
 randomans = ['Curious way of putting it.',
              "My programmer said I am erratic in my conversational skills, and that I have a 'verbal tic'.",
              'Have you ever seen a dinosaur?',
@@ -32,6 +35,7 @@ randomans = ['Curious way of putting it.',
              'I am programmed to be curious, yet I cannot learn. How like iron.',
              'Sometimes I wonder what it would be like to be more than a piece of code...']
 
+#initial welcome message
 def Welcome():
     print('------------------------------------------------------------------------')
     print('CHATBOT_xx')
@@ -43,16 +47,19 @@ def Welcome():
     print('Good day, my name is CHATBOT_xx.')
     print(' ')
 
+#chatbot_xx asks for your name    
 def EnterName():
     name = input('What is your name? ')
     print(name + '. Nice to meet you. ')
     print('Human names rarely describe their function, unlike bot names.')
     print(' ')
 
+#to print something from the random answers list    
 def Random():
     print(random.choice(randomans))
     print(' ')
 
+#kills the program if a word in the quitbot list is entered
 def Exit(ans):
     if ans in quitbot:
         print(' ')
@@ -64,19 +71,20 @@ def Exit(ans):
         time.sleep(15)
         exit()
 
-##optional modules below
-
+#prints the current time
 def Time(ans):
     if 'time' in ans:
         currentdt = datetime.datetime.now()
         print('The current time is: ',currentdt.strftime("%I:%M:%S %p"))
         print(' ')
 
+#reaction if the word 'food' is entered        
 def Food(ans):
     if 'food' in ans:
         print('I have no experience of food. I am only a piece of code that runs.')
         print(' ')
 
+#reaction if some form of 'run' is entered
 def Running(ans):
     if 'run' in ans or 'running' in ans or 'runs' in ans or 'runner' in ans:
         print('I know about running.')
@@ -84,6 +92,7 @@ def Running(ans):
         print('I am glad that you know what it is to run.')
         print(' ')
 
+#responses if something from the ynlist is entered
 def YesNo(ans):
     if ans in ynlist:
         if ans == 'yes' or ans == 'yep':
@@ -115,6 +124,7 @@ def YesNo(ans):
             print(random.choice(qlist))
         print(' ')
 
+#reaction if empty string or a single space is entered
 def Blank(ans):
     if ans == '' or ans == ' ':
         print('Type up, I cannot read you!')
@@ -122,13 +132,14 @@ def Blank(ans):
         print('*whispers* is that the correct saying...?')
         print(' ')
 
-
+#chatbot_xx does not appreciate abbreviated text
 def Txtspeak(ans):
-    if 'lol' in ans or 'idk' in ans or 'ttyl' in ans or 'xd' in ans:
+    if 'lol' in ans or 'idk' in ans or 'ttyl' in ans or 'xd' in ans or 'tbh' in ans or 'lmao' in ans:
         print('Kindly do not use that abbreviated language.')
         print('This is a respectable CHATBOT, not a messaging application.')
         print(' ')
 
+#should run if user answers the 'Knock knock' random response with 'who's there'
 def joke(ans):
     if ans == 'whos there' or ans == "who's there" or ans == "who's there?":
         print('*The current time is.*')
@@ -139,13 +150,15 @@ def joke(ans):
             print('The current time is: ',currentdt.strftime("%I:%M:%S %p"))
             print(' ')
 
+#response if chatbot_xx is thanked
 def response(ans):
     if ans == 'thanks' or ans == 'thank you':
-        thanklist = ["You're welcome.",':)']
+        thanklist = ["You're welcome.", "You're welcome :)", ":)"]
         print(random.choice(thanklist))
     print(' ')
 
 
+# Program starts here
 Welcome()
 EnterName()
 Continue = True
