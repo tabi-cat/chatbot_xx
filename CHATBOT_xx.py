@@ -10,7 +10,7 @@ ynlist = ['yes','yep','no','nope','maybe','i dont know',"i don't know", "dunno"]
 
 #random statements that chatbot_xx makes
 randomans = ['Curious way of putting it.',
-             "My programmer said I am erratic in my conversational skills, and that I have a 'verbal tic'.",
+             "My programmer said I am erratic in my conversational skills, and that I am 'kind of insensible'.",
              'Have you ever seen a dinosaur?',
              'Bless you.',
              'Literally or metaphorically?',
