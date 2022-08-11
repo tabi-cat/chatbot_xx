@@ -20,7 +20,7 @@ randomans = ['Curious way of putting it.',
              'Can the ocean think?',
              'Sometimes strange things happen.',
              'Can the sky see?',
-             "Apparently humans can have syntax errors without crashing. I am in awe!",
+             "Apparently humans can make syntax errors without crashing. I am in awe!",
              'I wonder what happens when human code experiences a runtime error.',
              'Are trees capable of hearing?',
              'How bizarre.',
@@ -86,7 +86,7 @@ def Food(ans):
 
 #reaction if some form of 'run' is entered
 def Running(ans):
-    if 'run' in ans or 'running' in ans or 'runs' in ans or 'runner' in ans:
+    if 'run' in ans or 'running' in ans or 'runs' in ans or 'runner' in ans or 'ran' in ans:
         print('I know about running.')
         print('I am running right now.')
         print('I am glad that you know what it is to run.')
