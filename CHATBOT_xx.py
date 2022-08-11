@@ -140,7 +140,7 @@ def Txtspeak(ans):
         print(' ')
 
 #should run if user answers the 'Knock knock' random response with 'who's there'
-def joke(ans):
+def Joke(ans):
     if ans == 'whos there' or ans == "who's there" or ans == "who's there?":
         print('*The current time is.*')
         print(' ')
@@ -151,7 +151,7 @@ def joke(ans):
             print(' ')
 
 #response if chatbot_xx is thanked
-def response(ans):
+def Response(ans):
     if ans == 'thanks' or ans == 'thank you':
         thanklist = ["You're welcome.", "You're welcome :)", ":)"]
         print(random.choice(thanklist))
@@ -175,8 +175,8 @@ while Continue == True:
     Blank(ans)
     Txtspeak(ans)
     Time(ans)
-    joke(ans)
-    response(ans)
+    Joke(ans)
+    Response(ans)
 
 
     
